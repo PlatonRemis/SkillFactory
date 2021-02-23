@@ -21,11 +21,11 @@ def game_core_v3(number):
         count+=1
         
         if predict<number:   #Если загаданное чило больше
-            floor = predict  #Мы сдвигаем нижнюю границу вверх
+            floor = predict  #Мы сдвигаем нижнюю границу вверх ->
             if round((ceiling-floor)/2)==0: #Защита от бесконечного цикла, когда number = ceiling
                 predict = ceiling
             else:
-                predict = floor + round((ceiling-floor)/2) #И наша новая догадка становится на середине
+                predict = floor + round((ceiling-floor)/2) #-> И наша новая догадка становится на середине
                                                            #Оставшегося ряда чисел (округляя вниз)
         elif predict>number: #То же самое, но двигаемся вниз
             ceiling = predict
